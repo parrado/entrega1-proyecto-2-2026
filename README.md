@@ -8,27 +8,28 @@ GDSPROC <br />
 Uniquindío <br />
 </p>
 
-Con esta práctica se iniciará el desarrollo del código fuente en Python del proyecto del espacio académico. En este caso, y de acuerdo a la arquitectura mostrada en la siguiente figura, se construirá el código del lado del servidor para la gestión de jugadores y preguntas.
+Con esta práctica se iniciará el desarrollo del código fuente en Python del proyecto del espacio académico. En este caso, y de acuerdo a la arquitectura mostrada en la siguiente figura, se construirá el código del lado del servidor para la gestión de usuarios y prácticas de laboratorio.
 
 <p align="center">
 <img  src="proyecto.jpg" width="800" >
 </p>
-En ese sentido, la práctica de laboratorio contempla la creación y prueba de funciones que hacen uso de archivos para la gestión de los jugadores y las preguntas, así como las demás estructuras de programación y tipos de datos estudiados hasta el momento. 
+
+En ese sentido, la primera entrega del proyecto contempla la creación y prueba de funciones que hacen uso de archivos para la gestión de los usuarios y las prácticas de laboratorio, así como las demás estructuras de programación y tipos de datos estudiados hasta el momento. 
 
 ## Código base suministrado
 
-Se suministra el código base del servidor en el archivo [trivia_server.py](trivia_server.py) el cual contiene toda la funcionalidad para que éste opere dentro de una red de área local o en el mismo equipo de prueba. **Este archivo no debe ser modificado bajo ninguna circunstancia**.
+Se suministra el código base del servidor en el archivo [virtuallab_server.py](virtuallab_server.py) el cual contiene toda la funcionalidad para que éste opere dentro de una red de área local o en el mismo equipo de prueba. **Este archivo no debe ser modificado bajo ninguna circunstancia**.
 
-En ese sentido, el archivo [trivia_server.py](trivia_server.py) usa el archivo [users.py](users.py) que incluye definiciones de funciones las cuales deben ser implementadas en el laboratorio de acuerdo a los descrito en los comentarios del archivo. **La implementación de estas funciones y su correcto funcionamiento determina la evaluación de esta práctica de laboratorio y el lado del servidor del proyecto**.
+En ese sentido, el archivo [virtuallab_server.py](virtuallab_server.py) usa el archivo [virtuallab_functions.py](virtuallab_functions.py) que incluye definiciones de funciones las cuales deben ser implementadas de acuerdo a los descrito en los comentarios del archivo. **La implementación de estas funciones y su correcto funcionamiento determina la evaluación del lado del servidor del proyecto**.
 
-El servidor permite registrar usuarios con un nombre y contraseña, y una vez un usuario registrado inicie sesión podrá:
+El servidor permite registrar usuarios con un nombre, número de identificación y contraseña, donde cada usuario podrá tener el rol de estudiante o profesor. y una vez un usuario registrado inicie sesión podrá:
 
 * Actualizar su puntaje y obtener su puntaje actual.
 * Obtener la lista de usuarios conectados con sesión iniciada.
 * Solicitar una pregunta aleatoria desde una categoría.
 * Cerrar sesión.
 
-También, se suministran los archivos [trivia_client.py](trivia_client.py) y [test_trivia_client.py](test_trivia_client.py). En este caso, [trivia_client.py](trivia_client.py) implementa la funcionalidad básica de los clientes (jugadores) para la conexión con el servidor por lo que **no debe ser modificado bajo ninguna circunstancia**. De otro lado, [test_trivia_client.py](test_trivia_client.py) es un archivo de prueba que se suministra para verificar el correcto funcionamiento del servidor y que puede ser modificado a gusto de los miembros del equipo. Para que [trivia_client.py](trivia_client.py) pueda funcionar correctamente se debe instalar el módulo de Python requests ejecutando el siguiente comando en una terminal:
+También, se suministran los archivos [virtuallab_client.py](virtuallab_client.py) y [test_virtuallab_client.py](test_virtuallab_client.py). En este caso,  [virtuallab_client.py](virtuallab_client.py) implementa la funcionalidad básica de los clientes (jugadores) para la conexión con el servidor por lo que **no debe ser modificado bajo ninguna circunstancia**. De otro lado, [test_virtuallab_client.py](test_virtuallab_client.py) es un archivo de prueba que se suministra para verificar el correcto funcionamiento del servidor y que puede ser modificado a gusto de los miembros del equipo. Para que [virtuallab_client.py](virtuallab_client.py) pueda funcionar correctamente se debe instalar el módulo de Python requests ejecutando el siguiente comando en una terminal:
 
 ``` pip install requests```
 
