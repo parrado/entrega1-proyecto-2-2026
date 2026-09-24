@@ -33,11 +33,16 @@ De otro lado, dependiendo del rol del usuario, se permitirán ciertas acciones. 
 * Obtener la lista de prácticas de laboratorio asignadas por el profesor
 
 Para el caso de los estudiantes se permitirán las siguientes acciones:
+
 * Obtener la lista de las prácticas de laboratorio asignadas
 * Descargar una práctica de laboratorio (archivo zip)
 * Enviar el reporte de la práctica de laboratorio
 
-También, se suministran los archivos [virtuallab_client.py](virtuallab_client.py) y [test_virtuallab_client.py](test_virtuallab_client.py). En este caso,  [virtuallab_client.py](virtuallab_client.py) implementa la funcionalidad básica de los clientes para la conexión con el servidor por lo que **no debe ser modificado bajo ninguna circunstancia**. De otro lado, [test_virtuallab_client.py](test_virtuallab_client.py) es un archivo de prueba que se suministra para verificar el correcto funcionamiento del servidor y que puede ser modificado a gusto de los miembros del equipo. Para que [virtuallab_client.py](virtuallab_client.py) pueda funcionar correctamente se debe instalar el módulo de Python requests ejecutando el siguiente comando en una terminal:
+Para lograr la funcionalidad anterior, se debe hacer uso de archivos de texto plano, por lo que no se admite usar motores para gestión de bases de datos. 
+
+Adicionalmente, el archivo zip usado para cada práctica de laboratorio debe incluir: lista de conexiones SPICE del circuito, archivo con los nombres de los nodos del circuito. Para la segunda entrega del proyecto se deberá incluir una imagen con un diagrama esquemático del circuito.
+
+Por otra parte, se suministran los archivos [virtuallab_client.py](virtuallab_client.py) y [test_virtuallab_client.py](test_virtuallab_client.py). En este caso,  [virtuallab_client.py](virtuallab_client.py) implementa la funcionalidad básica de los clientes para la conexión con el servidor por lo que **no debe ser modificado bajo ninguna circunstancia**. También, se suministra el script de prueba [test_virtuallab_client.py](test_virtuallab_client.py) para verificar el correcto funcionamiento del servidor,  este script puede ser modificado a gusto de los miembros del equipo. Para que [virtuallab_client.py](virtuallab_client.py) pueda funcionar correctamente se debe instalar el módulo de Python requests ejecutando el siguiente comando en una terminal:
 
 ``` pip install requests```
 
