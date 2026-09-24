@@ -44,6 +44,7 @@ Adicionalmente, el archivo zip usado para cada práctica de laboratorio debe inc
 Por otra parte, se suministran los archivos [virtuallab_client.py](client/virtuallab_client.py) y [test_virtuallab_client.py](client/test_virtuallab_client.py). En este caso,  [virtuallab_client.py](client/virtuallab_client.py) implementa la funcionalidad básica de los clientes para la conexión con el servidor por lo que **no debe ser modificado bajo ninguna circunstancia**. También, se suministra el script de prueba [test_virtuallab_client.py](client/test_virtuallab_client.py) para verificar el correcto funcionamiento del servidor,  este script puede ser modificado a gusto de los miembros del equipo. Para que [virtuallab_client.py](client/virtuallab_client.py) pueda funcionar correctamente se deben instalar los paquetes de Python requests y pyspice ejecutando los siguiente comandos en una terminal:
 
 ``` pip install requests```
+
 ``` pip install pyspice```
 
 Para que pyspice pueda funcionar correctamente, es neceario ejecutar una post-instalación para incluir la biblioteca dinámica de Ngspice:
