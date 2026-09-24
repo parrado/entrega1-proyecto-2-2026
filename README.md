@@ -18,7 +18,7 @@ En ese sentido, la primera entrega del proyecto contempla la creación y prueba 
 
 ## Código base suministrado
 
-Se suministra el código base del servidor en el archivo [virtuallab_server.py](virtuallab_server.py) el cual contiene toda la funcionalidad para que éste opere dentro de una red de área local o en el mismo equipo de prueba. **Este archivo no debe ser modificado bajo ninguna circunstancia**.
+Se suministra el código base del servidor en el archivo [virtuallab_server.py](server/virtuallab_server.py) el cual contiene toda la funcionalidad para que éste opere dentro de una red de área local o en el mismo equipo de prueba. **Este archivo no debe ser modificado bajo ninguna circunstancia**.
 
 En ese sentido, el archivo [virtuallab_server.py](virtuallab_server.py) usa el archivo [virtuallab_functions.py](virtuallab_functions.py) que incluye definiciones de funciones las cuales deben ser implementadas de acuerdo a los descrito en los comentarios del archivo. **La implementación de estas funciones y su correcto funcionamiento determina la evaluación del lado del servidor del proyecto**.
 
