@@ -20,7 +20,7 @@ En ese sentido, la primera entrega del proyecto contempla la creación y prueba 
 
 Se suministra el código base del servidor en el archivo [virtuallab_server.py](server/virtuallab_server.py) el cual contiene toda la funcionalidad para que éste opere dentro de una red de área local o en el mismo equipo de prueba. **Este archivo no debe ser modificado bajo ninguna circunstancia**.
 
-En ese sentido, el archivo [virtuallab_server.py](virtuallab_server.py) usa el archivo [virtuallab_functions.py](virtuallab_functions.py) que incluye definiciones de funciones las cuales deben ser implementadas de acuerdo a los descrito en los comentarios del archivo. **La implementación de estas funciones y su correcto funcionamiento determina la evaluación del lado del servidor del proyecto**.
+En ese sentido, el archivo [virtuallab_server.py](server/virtuallab_server.py) usa el archivo [virtuallab_functions.py](server/virtuallab_functions.py) que incluye definiciones de funciones las cuales deben ser implementadas de acuerdo a los descrito en los comentarios del archivo. **La implementación de estas funciones y su correcto funcionamiento determina la evaluación del lado del servidor del proyecto**.
 
 El servidor debe permitir registrar usuarios con un nombre, número de identificación y contraseña, donde cada usuario podrá tener el rol de estudiante o profesor. Además, todos los usuarios sin importar su rol podrán iniciar y cerrar sesión.
 
@@ -36,21 +36,20 @@ Para el caso de los estudiantes se permitirán las siguientes acciones:
 
 * Obtener la lista de las prácticas de laboratorio asignadas
 * Descargar una práctica de laboratorio (archivo zip)
-* Enviar el reporte de la práctica de laboratorio
 
 Para lograr la funcionalidad anterior, se debe hacer uso de archivos de texto plano, por lo que no se admite usar motores para gestión de bases de datos. 
 
 Adicionalmente, el archivo zip usado para cada práctica de laboratorio debe incluir: lista de conexiones SPICE del circuito, archivo con los nombres de los nodos del circuito. Para la segunda entrega del proyecto se deberá incluir una imagen con un diagrama esquemático del circuito.
 
-Por otra parte, se suministran los archivos [virtuallab_client.py](virtuallab_client.py) y [test_virtuallab_client.py](test_virtuallab_client.py). En este caso,  [virtuallab_client.py](virtuallab_client.py) implementa la funcionalidad básica de los clientes para la conexión con el servidor por lo que **no debe ser modificado bajo ninguna circunstancia**. También, se suministra el script de prueba [test_virtuallab_client.py](test_virtuallab_client.py) para verificar el correcto funcionamiento del servidor,  este script puede ser modificado a gusto de los miembros del equipo. Para que [virtuallab_client.py](virtuallab_client.py) pueda funcionar correctamente se debe instalar el módulo de Python requests ejecutando el siguiente comando en una terminal:
+Por otra parte, se suministran los archivos [virtuallab_client.py](client/virtuallab_client.py) y [test_virtuallab_client.py](client/test_virtuallab_client.py). En este caso,  [virtuallab_client.py](client/virtuallab_client.py) implementa la funcionalidad básica de los clientes para la conexión con el servidor por lo que **no debe ser modificado bajo ninguna circunstancia**. También, se suministra el script de prueba [test_virtuallab_client.py](client/test_virtuallab_client.py) para verificar el correcto funcionamiento del servidor,  este script puede ser modificado a gusto de los miembros del equipo. Para que [virtuallab_client.py](client/virtuallab_client.py) pueda funcionar correctamente se debe instalar el módulo de Python requests ejecutando el siguiente comando en una terminal:
 
 ``` pip install requests```
 
 ## ¿Cómo realizar las pruebas?
 
-Para la realización de las pruebas debe ejecutar primero el programa [virtuallab_server.py](virtuallab_server.py), la recomendación es verificar el correcto funcionamiento de las funciones, una a la vez. Posteriormente se puede ejecutar el programa [test_virtuallab_client.py](test_virtuallab_client.py), en caso de que se creen ventanas emergentes de Windows solicitando permisos, por favor otorgarlos ya que los programas hacen uso de los servicios de red. 
+Para la realización de las pruebas debe ejecutar primero el programa [virtuallab_server.py](server/virtuallab_server.py), la recomendación es verificar el correcto funcionamiento de las funciones, una a la vez. Posteriormente se puede ejecutar el programa [test_virtuallab_client.py](client/test_virtuallab_client.py), en caso de que se creen ventanas emergentes de Windows solicitando permisos, por favor otorgarlos ya que los programas hacen uso de los servicios de red. 
 
-Tenga en cuenta que es posible que [virtuallab_server.py](virtuallab_server.py) y [test_virtuallab_client.py](test_virtuallab_client.py) se ejecuten en computadores diferentes siempre y cuando los equipos se encuentren conectados a la misma red LAN cableada o inalámbrica. En ese caso basta con consultar la dirección IP del computador que está ejecutando [virtuallab_server.py](virtuallab_server.py) mediante el comando ipconfig como se muestra en la siguiente figura.
+Tenga en cuenta que es posible que [virtuallab_server.py](server/virtuallab_server.py) y [test_virtuallab_client.py](client/test_virtuallab_client.py) se ejecuten en computadores diferentes siempre y cuando los equipos se encuentren conectados a la misma red LAN cableada o inalámbrica. En ese caso basta con consultar la dirección IP del computador que está ejecutando [virtuallab_server.py](server/virtuallab_server.py) mediante el comando ipconfig como se muestra en la siguiente figura.
 
 
 <p align="center">
