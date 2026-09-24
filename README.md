@@ -41,9 +41,16 @@ Para lograr la funcionalidad anterior, se debe hacer uso de archivos de texto pl
 
 Adicionalmente, el archivo zip usado para cada práctica de laboratorio debe incluir: lista de conexiones SPICE del circuito, archivo con los nombres de los nodos del circuito. Para la segunda entrega del proyecto se deberá incluir una imagen con un diagrama esquemático del circuito.
 
-Por otra parte, se suministran los archivos [virtuallab_client.py](client/virtuallab_client.py) y [test_virtuallab_client.py](client/test_virtuallab_client.py). En este caso,  [virtuallab_client.py](client/virtuallab_client.py) implementa la funcionalidad básica de los clientes para la conexión con el servidor por lo que **no debe ser modificado bajo ninguna circunstancia**. También, se suministra el script de prueba [test_virtuallab_client.py](client/test_virtuallab_client.py) para verificar el correcto funcionamiento del servidor,  este script puede ser modificado a gusto de los miembros del equipo. Para que [virtuallab_client.py](client/virtuallab_client.py) pueda funcionar correctamente se debe instalar el módulo de Python requests ejecutando el siguiente comando en una terminal:
+Por otra parte, se suministran los archivos [virtuallab_client.py](client/virtuallab_client.py) y [test_virtuallab_client.py](client/test_virtuallab_client.py). En este caso,  [virtuallab_client.py](client/virtuallab_client.py) implementa la funcionalidad básica de los clientes para la conexión con el servidor por lo que **no debe ser modificado bajo ninguna circunstancia**. También, se suministra el script de prueba [test_virtuallab_client.py](client/test_virtuallab_client.py) para verificar el correcto funcionamiento del servidor,  este script puede ser modificado a gusto de los miembros del equipo. Para que [virtuallab_client.py](client/virtuallab_client.py) pueda funcionar correctamente se deben instalar los paquetes de Python requests y pyspice ejecutando los siguiente comandos en una terminal:
 
 ``` pip install requests```
+``` pip install pyspice```
+
+Para que pyspice pueda funcionar correctamente, es neceario ejecutar una post-instalación para incluir la biblioteca dinámica de Ngspice:
+
+``` pyspice-post-installation.exe --install-ngspice-dll```
+
+
 
 ## ¿Cómo realizar las pruebas?
 
@@ -65,4 +72,4 @@ El laboratorio debe ser presentado mediante:
 1. Repositorio en GitHub.
 2. Sustentación individual.
 
-El informe de laboratorio y el enlace al repositorio de GitHub deben ser compartidos en el enlace dispuesto para tal fin en la plataforma Google Classroom.
+El informe de laboratorio y el enlace al repositorio de GitHub deben ser compartidos en el enlace dispuesto para tal fin en la plataforma Moodle.
