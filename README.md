@@ -22,35 +22,43 @@ Se suministra el código base del servidor en el archivo [virtuallab_server.py](
 
 En ese sentido, el archivo [virtuallab_server.py](virtuallab_server.py) usa el archivo [virtuallab_functions.py](virtuallab_functions.py) que incluye definiciones de funciones las cuales deben ser implementadas de acuerdo a los descrito en los comentarios del archivo. **La implementación de estas funciones y su correcto funcionamiento determina la evaluación del lado del servidor del proyecto**.
 
-El servidor permite registrar usuarios con un nombre, número de identificación y contraseña, donde cada usuario podrá tener el rol de estudiante o profesor. y una vez un usuario registrado inicie sesión podrá:
+El servidor debe permitir registrar usuarios con un nombre, número de identificación y contraseña, donde cada usuario podrá tener el rol de estudiante o profesor. Además, todos los usuarios sin importar su rol podrán iniciar y cerrar sesión.
 
-* Actualizar su puntaje y obtener su puntaje actual.
-* Obtener la lista de usuarios conectados con sesión iniciada.
-* Solicitar una pregunta aleatoria desde una categoría.
-* Cerrar sesión.
+De otro lado, dependiendo del rol del usuario, se permitirán ciertas acciones. Para el caso de los profesores se permitirán las siguientes acciones:
 
-También, se suministran los archivos [virtuallab_client.py](virtuallab_client.py) y [test_virtuallab_client.py](test_virtuallab_client.py). En este caso,  [virtuallab_client.py](virtuallab_client.py) implementa la funcionalidad básica de los clientes (jugadores) para la conexión con el servidor por lo que **no debe ser modificado bajo ninguna circunstancia**. De otro lado, [test_virtuallab_client.py](test_virtuallab_client.py) es un archivo de prueba que se suministra para verificar el correcto funcionamiento del servidor y que puede ser modificado a gusto de los miembros del equipo. Para que [virtuallab_client.py](virtuallab_client.py) pueda funcionar correctamente se debe instalar el módulo de Python requests ejecutando el siguiente comando en una terminal:
+* Obtener la lista de los estudiantes registrados
+* Cargar una práctica de laboratorio (archivo zip)
+* Obtener la lista de prácticas de laboratorio cargadas por los profesores
+* Asignar una práctica de laboratorio a un estudiante
+* Obtener la lista de prácticas de laboratorio asignadas por el profesor
+
+Para el caso de los estudiantes se permitirán las siguientes acciones:
+* Obtener la lista de las prácticas de laboratorio asignadas
+* Descargar una práctica de laboratorio (archivo zip)
+* Enviar el reporte de la práctica de laboratorio
+
+También, se suministran los archivos [virtuallab_client.py](virtuallab_client.py) y [test_virtuallab_client.py](test_virtuallab_client.py). En este caso,  [virtuallab_client.py](virtuallab_client.py) implementa la funcionalidad básica de los clientes para la conexión con el servidor por lo que **no debe ser modificado bajo ninguna circunstancia**. De otro lado, [test_virtuallab_client.py](test_virtuallab_client.py) es un archivo de prueba que se suministra para verificar el correcto funcionamiento del servidor y que puede ser modificado a gusto de los miembros del equipo. Para que [virtuallab_client.py](virtuallab_client.py) pueda funcionar correctamente se debe instalar el módulo de Python requests ejecutando el siguiente comando en una terminal:
 
 ``` pip install requests```
 
 ## ¿Cómo realizar las pruebas?
 
-Para la realización de las pruebas debe ejecutar primero el programa [trivia_server.py](trivia_server.py), la recomendación es verificar el correcto funcionamiento de las funciones, una a la vez. Posteriormente se puede ejecutar el programa [test_trivia_client.py](test_trivia_client.py), en caso de que se creen ventanas emergentes de Windows solicitando permisos, por favor otorgarlos ya que los programas hacen uso de los servicios de red. 
+Para la realización de las pruebas debe ejecutar primero el programa [virtuallab_server.py](virtuallab_server.py), la recomendación es verificar el correcto funcionamiento de las funciones, una a la vez. Posteriormente se puede ejecutar el programa [test_virtuallab_client.py](test_virtuallab_client.py), en caso de que se creen ventanas emergentes de Windows solicitando permisos, por favor otorgarlos ya que los programas hacen uso de los servicios de red. 
 
-Tenga en cuenta que es posible que [trivia_server.py](trivia_server.py) y [test_trivia_client.py](test_trivia_client.py) se ejecuten en computadores diferentes siempre y cuando los equipos se encuentren conectados a la misma red LAN cableada o inalámbrica. En ese caso basta con consultar la dirección IP del computador que está ejecutando [trivia_server.py](trivia_server.py) mediante el comando ipconfig como se muestra en la siguiente figura.
+Tenga en cuenta que es posible que [virtuallab_server.py](virtuallab_server.py) y [test_virtuallab_client.py](test_virtuallab_client.py) se ejecuten en computadores diferentes siempre y cuando los equipos se encuentren conectados a la misma red LAN cableada o inalámbrica. En ese caso basta con consultar la dirección IP del computador que está ejecutando [virtuallab_server.py](virtuallab_server.py) mediante el comando ipconfig como se muestra en la siguiente figura.
 
 
 <p align="center">
 <img  src="Captura de pantalla (2).png" width="800" >
 </p>
 
-La IP encontrada debe sustituir "localhost" en la línea 6 de [test_trivia_client.py](https://github.com/parrado/lab2/blob/c80a0f73b9324b082ebea63a3377358d36a4c8d8/test_trivia_client.py#L6)
+La IP encontrada debe sustituir "localhost" en la línea 6 de [test_virtuallab_client.py](https://github.com/parrado/lab2/blob/c80a0f73b9324b082ebea63a3377358d36a4c8d8/test_trivia_client.py#L6)
 
 # Entrega del laboratorio
 
 El laboratorio debe ser presentado mediante:
 
 1. Repositorio en GitHub.
-2. Informe de laboratorio.
+2. Sustentación individual.
 
 El informe de laboratorio y el enlace al repositorio de GitHub deben ser compartidos en el enlace dispuesto para tal fin en la plataforma Google Classroom.
