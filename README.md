@@ -56,7 +56,7 @@ Tenga en cuenta que es posible que [virtuallab_server.py](server/virtuallab_serv
 <img  src="Captura de pantalla (2).png" width="800" >
 </p>
 
-La IP encontrada debe sustituir "localhost" en la línea 6 de [test_virtuallab_client.py]([https://github.com/parrado/lab2/blob/c80a0f73b9324b082ebea63a3377358d36a4c8d8/test_trivia_client.py#L6](https://github.com/parrado/entrega1-proyecto-2-2026/blob/b6be68a135d8f4b58fe7a5d219becb219f730369/client/test_virtuallab_client.py#L6)
+La IP encontrada debe sustituir "localhost" en la línea 6 de [test_virtuallab_client.py](https://github.com/parrado/entrega1-proyecto-2-2026/blob/b6be68a135d8f4b58fe7a5d219becb219f730369/client/test_virtuallab_client.py#L6)
 
 # Entrega del laboratorio
 
