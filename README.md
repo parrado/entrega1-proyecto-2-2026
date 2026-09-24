@@ -47,7 +47,7 @@ Por otra parte, se suministran los archivos [virtuallab_client.py](client/virtua
 
 ``` pip install pyspice```
 
-Para que pyspice pueda funcionar correctamente, es neceario ejecutar una post-instalación para incluir la biblioteca dinámica de Ngspice:
+Para que pyspice pueda funcionar correctamente, es necesario ejecutar una post-instalación para incluir la biblioteca dinámica de Ngspice:
 
 ``` pyspice-post-installation.exe --install-ngspice-dll```
 
