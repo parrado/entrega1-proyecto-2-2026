@@ -5,7 +5,7 @@ import os
 
 # Función para registrar usuario
 def registerUser(url,name,id,role,password):    
-    response=requests.post(url+'/register',data=f'name={name}&id={id}&role={role},&password={password}')
+    response=requests.post(url+'/register',data=f'name={name}&id={id}&role={role}&password={password}')
     return response.content.decode('utf-8')
 
 # Funciónn para abrir una sesión
