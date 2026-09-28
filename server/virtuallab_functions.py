@@ -4,14 +4,56 @@
 
 
 import os
+from json import dumps # Convertir diccionario a JSON
+from json import loads # Convertir JSON a diccionario
+
+usersFile = "server/users.txt"
+
+def writeUserDataToFile(user_data):
+    with open(usersFile, "a") as file:
+        file.write(dumps(user_data) + "\n")
 
 # Función para registrar un usuario con nombre name, identificador id, rol role y contraseña password.
 # Registra el usuario en el sistema si el id del usuario no existe previamente. Si el usuario se pudo registrar debe retornar "User {name} with role {role} registered" de lo contrario
 # debe retornar "User already registered"
 def registerUser(name,id,role,password):
+    
+    try:
+        file=open(usersFile, "r")        
+
+    except FileNotFoundError:
+        #Archivo no existe
+        print("File not found, creating a new one.")
+         
+                      
+    else:
+        with file:
+            lines=file.readlines()
+            for line in lines:
+                user=loads(line)
+                if user["id"]==id:
+                    response="User already registered"
+                    print(response)
+                    return response
+
+    
+    #######################################
+    user_data = {
+        "name": name,
+        "id": id,
+        "role": role,
+        "password": password
+    }
+
+    writeUserDataToFile(user_data)
     response=f"User {name} with role {role} registered"
     print(response)
     return response
+            
+
+
+
+
             
 
 # Función que abre una sesión
